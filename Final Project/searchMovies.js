@@ -42,13 +42,13 @@ function searchMovies() {
     // MoviesGrid element
     const MoviesGrid = document.getElementById('MoviesGrid');
 
-    // Search result validation
+    // Search result validation to ensure a return
     if (searchInput.trim() !== '') {
 
-        // Display loading message
+        // Display loading message when searching
         MoviesGrid.innerHTML = '<p>Loading movies...</p>';
 
-        // Fetch movie data from OMDB API
+        // Fetch movie data from OMDB API, works only with good internet -_-
         fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput}`)
             .then(response => response.json())
             .then(data => {
