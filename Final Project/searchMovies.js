@@ -7,7 +7,7 @@ const searchTerms = ['action', 'comedy', 'drama', 'adventure'];
 
 function findMovies() {
     // omdb API key
-    const apiKey = 'YOUR_OMDB_API_KEY';
+    const apiKey = '709b7281';
 
     // MoviesGrid element
     const MoviesGrid = document.getElementById('MoviesGrid');
