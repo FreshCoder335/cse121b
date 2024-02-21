@@ -1,12 +1,12 @@
+// Define an array to store search terms
+const searchTerms = ['action', 'comedy', 'drama', 'adventure'];
+
 document.addEventListener('DOMContentLoaded', function () {
     findMovies();
 });
 
-// Define an array to store search terms
-const searchTerms = ['action', 'comedy', 'drama', 'adventure'];
-
 function findMovies() {
-    // omdb API key
+    // OMDB API key
     const apiKey = '709b7281';
 
     // MoviesGrid element
@@ -19,7 +19,7 @@ function findMovies() {
     const randomTerm = searchTerms[Math.floor(Math.random() * searchTerms.length)];
 
     // Fetch movie data from OMDB API with a random search term
-    fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${randomTerm}`)
+    fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${randomTerm}`)
         .then(response => response.json())
         .then(data => {
             if (data.Search && data.Search.length > 0) {
@@ -35,8 +35,8 @@ function findMovies() {
 }
 
 function searchMovies() {
-    // omdb API key
-    const apiKey = '709b7281';
+    // OMDB API key
+    const apiKey = 'YOUR_OMDB_API_KEY';
     const searchInput = document.getElementById('searchInput').value;
 
     // MoviesGrid element
@@ -48,8 +48,8 @@ function searchMovies() {
         // Display loading message when searching
         MoviesGrid.innerHTML = '<p>Loading movies...</p>';
 
-        // Fetch movie data from OMDB API, works only with good internet -_-
-        fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput}`)
+        // Fetch movie data from OMDB API
+        fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput}`)
             .then(response => response.json())
             .then(data => {
                 if (data.Search && data.Search.length > 0) {
