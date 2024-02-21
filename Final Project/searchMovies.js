@@ -36,7 +36,7 @@ function findMovies() {
 
 function searchMovies() {
     // omdb API key
-    const apiKey = 'YOUR_OMDB_API_KEY';
+    const apiKey = '709b7281';
     const searchInput = document.getElementById('searchInput').value;
 
     // MoviesGrid element
